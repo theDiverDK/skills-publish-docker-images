@@ -1,16 +1,29 @@
-# Publish Docker Packages
+# Publish Docker Images
 
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
+A GitHub Skills exercise for building a small static site into a Docker image and publishing it through GitHub Actions.
 
-Hey theDiverDK!
+## What is in this repository
 
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
+- `src/` — static HTML, JavaScript, CSS, and pattern assets served by Nginx.
+- `Dockerfile` — packages `src/` into the `nginx:alpine` image.
+- `.github/workflows/` — the guided exercise workflows.
+- `.github/steps/` — instructions for each exercise step.
 
-Remember, it's self-paced so feel free to take a break! ☕️
+## Run locally
 
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/theDiverDK/skills-publish-docker-images/issues/1)
+Build and start the container:
 
----
+```bash
+docker build -t publish-docker-images .
+docker run --rm -p 8080:80 publish-docker-images
+```
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+Then open <http://localhost:8080>.
 
+## Exercise
+
+Follow the tasks in [the exercise issue](https://github.com/theDiverDK/skills-publish-docker-images/issues/1). The workflow files advance the exercise through building and publishing a Docker image.
+
+## License
+
+See [LICENSE](LICENSE).
